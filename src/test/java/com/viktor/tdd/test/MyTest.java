@@ -29,6 +29,8 @@ public class MyTest
   
   @Test
   public void sumTest(){
+    tested.setField(5);
+    assertEquals(5, tested.getField());
     assertEquals(6, tested.sum(3, 3));
   }
 
