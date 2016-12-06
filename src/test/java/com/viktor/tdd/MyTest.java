@@ -1,4 +1,4 @@
-package com.viktor.tdd.test;
+package com.viktor.tdd;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
