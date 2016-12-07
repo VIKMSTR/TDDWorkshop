@@ -13,6 +13,7 @@ public class DummyPriceProvider implements PriceProvider
 {
 
   private final String currency; 
+  //make a Immutable map ?
   @Getter
   private Map<String, Price> priceDatabase;
   
