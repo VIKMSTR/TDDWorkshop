@@ -34,6 +34,7 @@ public class DummyPriceProvider implements PriceProvider
 
   public Price providePriceForBarcode(String barcode) throws ItemPriceNotFoundException
   {
+    //check for empty string
     if(priceDatabase.containsKey(barcode)){
       return priceDatabase.get(barcode);
     }else{

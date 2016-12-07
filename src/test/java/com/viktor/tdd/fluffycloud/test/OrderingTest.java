@@ -11,40 +11,49 @@ import org.junit.Test;
 import com.viktor.tdd.fluffycloud.ItemPriceNotFoundException;
 import com.viktor.tdd.fluffycloud.OrderProcessor;
 import com.viktor.tdd.fluffycloud.Price;
+
 public class OrderingTest
 {
   OrderProcessor orderProcessor;
   String currency;
   
+  
   @Before
-  public void prepareOrders(){
+  public void prepareOrders()
+  {
     currency = "EUR";
     orderProcessor = new OrderProcessor(new DummyPriceProvider(currency));
   }
-  
+
   @Test
-  public void sellOneItemTest() throws ItemPriceNotFoundException{
-   Price price =  orderProcessor.getItemPrice("0000000018");
-   assertThat(price.getCurrency(), is(currency));
-   assertThat(price.getValue(), is(666.50));
-   
+  public void sellOneItemTest() throws ItemPriceNotFoundException
+  {
+    Price price = orderProcessor.getItemPrice("0000000018");
+    assertThat(price.getCurrency(), is(currency));
+    assertThat(price.getValue(), is(666.50));
+
   }
+
+ 
   
   @Test
-  public void testIfSeparatorIsDot() throws ItemPriceNotFoundException{
-    Price price =  orderProcessor.getItemPrice("0000000018");
+  public void testIfSeparatorIsDot() throws ItemPriceNotFoundException
+  {
+    Price price = orderProcessor.getItemPrice("0000000018");
     assertThat(price.getCurrency(), is(currency));
     assertTrue(price.toString().contains("."));
   }
-  
+
   @Test
-  public void testIfThePriceIsMissing(){
-    try{
-      
-    
-    Price price =  orderProcessor.getItemPrice("BLAH");
-    fail();
-    }catch (ItemPriceNotFoundException expected) {
+  public void testIfThePriceIsMissing()
+  {
+    try
+    {
+      orderProcessor.getItemPrice("BLAH");
+      fail();
+    }
+    catch (ItemPriceNotFoundException expected)
+    {
     }
   }
 }
