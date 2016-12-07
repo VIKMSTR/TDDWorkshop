@@ -1,7 +1,9 @@
 package com.viktor.tdd;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
+@EqualsAndHashCode
 public class Fraction
 {
 
@@ -59,19 +61,6 @@ public class Fraction
 
   }
   
-  @Override
-  public boolean equals(Object obj)
-  {
-    if(obj instanceof Fraction){
-      Fraction other = (Fraction) obj;
-      return this.nominator * other.denominator == other.nominator*this.denominator;
-    } else return false;
-  }
-  
-  @Override
-  public int hashCode()
-  {
-   return 0;
-  }
+ 
   
 }
