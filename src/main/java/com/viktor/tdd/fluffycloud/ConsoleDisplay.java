@@ -22,4 +22,12 @@ public class ConsoleDisplay implements Display
 
   }
 
+  @Override
+  public void printEmptyBarcodeMessage()
+  {
+    System.err.println(":: Barcode is empty ::");
+
+    
+  }
+
 }

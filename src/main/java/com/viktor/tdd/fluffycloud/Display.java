@@ -7,5 +7,7 @@ public interface Display
   
   void printProductNotFound();
 
+  void printEmptyBarcodeMessage();
+
 
 }
