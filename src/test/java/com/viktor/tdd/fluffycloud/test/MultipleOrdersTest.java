@@ -19,7 +19,7 @@ public class MultipleOrdersTest
   @Before
   public void setupTheSystem()
   {
-    sale = new Sale(new DummyPriceProvider("EUR"));
+    sale = new Sale(new DummyCatalog("EUR"));
   }
 
   @Test

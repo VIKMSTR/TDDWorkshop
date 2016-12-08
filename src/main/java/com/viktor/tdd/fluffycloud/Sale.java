@@ -3,13 +3,13 @@ package com.viktor.tdd.fluffycloud;
 public class Sale
 {
 
-  private final PriceProvider priceProvider;
+  private final Catalog priceProvider;
   private IOrder openOrder;
   /***
    *
    * @param priceProvider new price provider
    */
-  public Sale(PriceProvider priceProvider)
+  public Sale(Catalog priceProvider)
   {
     this.priceProvider = priceProvider;
   }

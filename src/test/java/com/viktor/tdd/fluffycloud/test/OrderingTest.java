@@ -22,7 +22,7 @@ public class OrderingTest
   public void prepareOrders()
   {
     currency = "EUR";
-    orderProcessor = new Sale(new DummyPriceProvider(currency));
+    orderProcessor = new Sale(new DummyCatalog(currency));
   }
 
   @Test

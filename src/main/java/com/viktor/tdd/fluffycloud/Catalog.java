@@ -1,6 +1,6 @@
 package com.viktor.tdd.fluffycloud;
 
-public interface PriceProvider
+public interface Catalog
 {
 
   Price providePriceForBarcode(String barcode) throws ItemPriceNotFoundException;

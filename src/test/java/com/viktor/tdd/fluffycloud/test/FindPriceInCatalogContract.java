@@ -1,0 +1,40 @@
+package com.viktor.tdd.fluffycloud.test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
+
+import com.viktor.tdd.fluffycloud.Catalog;
+import com.viktor.tdd.fluffycloud.ItemPriceNotFoundException;
+import com.viktor.tdd.fluffycloud.Price;
+
+public abstract class FindPriceInCatalogContract
+{
+
+  private final String currency ="EUR";
+  
+  @Test
+  public void productFound() throws Exception {
+      final Catalog catalog = catalogWith("12345", new Price(currency, 300));
+      assertThat(new Price(currency, 300), is(catalog.providePriceForBarcode("12345")));
+  }
+
+  protected abstract Catalog catalogWith(String barcode, Price matchingPrice);
+
+  @Test
+  public void productNotFound() throws Exception {
+      final Catalog catalog = catalogWithout("::barcode not found::");
+      try{
+        Price p = catalog.providePriceForBarcode("12345");
+        fail();
+      }catch (ItemPriceNotFoundException expected) {
+      
+      }
+   
+  }
+
+  protected abstract Catalog catalogWithout(String barcodeToAvoid);
+
+}

@@ -2,11 +2,9 @@ package com.viktor.tdd.fluffycloud;
 
 import java.util.Locale;
 
-import lombok.EqualsAndHashCode;
 import lombok.Value;
 
 @Value
-@EqualsAndHashCode
 public class Price
 {
 

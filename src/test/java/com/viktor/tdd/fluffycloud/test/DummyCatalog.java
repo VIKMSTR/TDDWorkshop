@@ -3,13 +3,13 @@ package com.viktor.tdd.fluffycloud.test;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.viktor.tdd.fluffycloud.Catalog;
 import com.viktor.tdd.fluffycloud.ItemPriceNotFoundException;
 import com.viktor.tdd.fluffycloud.Price;
-import com.viktor.tdd.fluffycloud.PriceProvider;
 
 import lombok.Getter;
 
-public class DummyPriceProvider implements PriceProvider
+public class DummyCatalog implements Catalog
 {
 
   private final String currency; 
@@ -17,10 +17,15 @@ public class DummyPriceProvider implements PriceProvider
   @Getter
   private Map<String, Price> priceDatabase;
   
-  public DummyPriceProvider(String currency){
+  public DummyCatalog(String currency){
     priceDatabase = new HashMap<String, Price>();
     this.currency = currency;
     makeDummyPrices();
+  }
+  
+  public DummyCatalog(String currency, Map<String, Price> priceDatabase){
+    this.currency = currency;
+    this.priceDatabase = priceDatabase;
   }
   
 
