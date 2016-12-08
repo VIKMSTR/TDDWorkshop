@@ -1,6 +1,6 @@
 package com.viktor.tdd.fluffycloud;
 
-public class SellOneItemController
+public class SellOneItemController implements Controller
 {
 
   private Catalog catalog;
@@ -12,6 +12,10 @@ public class SellOneItemController
     this.display = display;
   }
 
+  /* (non-Javadoc)
+   * @see com.viktor.tdd.fluffycloud.Controller#onBarcode(java.lang.String)
+   */
+  @Override
   public void onBarcode(String barcode)
   {
     // handle display
