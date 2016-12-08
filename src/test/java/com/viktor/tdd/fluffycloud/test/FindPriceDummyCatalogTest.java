@@ -6,6 +6,13 @@ import java.util.Map;
 import com.viktor.tdd.fluffycloud.Catalog;
 import com.viktor.tdd.fluffycloud.Price;
 
+/***
+ * The test that extends the Contract test. This initialize the specific Catalog type
+ * In this case - Dummy Catalog. The tests in parent are ran to fulfill the contract.
+ *  
+ * @author z003e2nc
+ *
+ */
 public  class FindPriceDummyCatalogTest extends FindPriceInCatalogContract
 {
 

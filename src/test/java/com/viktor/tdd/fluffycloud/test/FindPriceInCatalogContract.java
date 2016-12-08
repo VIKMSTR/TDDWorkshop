@@ -10,6 +10,13 @@ import com.viktor.tdd.fluffycloud.Catalog;
 import com.viktor.tdd.fluffycloud.ItemPriceNotFoundException;
 import com.viktor.tdd.fluffycloud.Price;
 
+/**
+ * The contract test. It specifies how the catalog should behave. 
+ * The abstract methods are meant to be implemented in child for concrete type of catalog
+ *  
+ * @author z003e2nc
+ *
+ */
 public abstract class FindPriceInCatalogContract
 {
 
