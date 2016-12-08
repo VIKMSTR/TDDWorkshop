@@ -9,12 +9,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.viktor.tdd.fluffycloud.ItemPriceNotFoundException;
-import com.viktor.tdd.fluffycloud.OrderProcessor;
+import com.viktor.tdd.fluffycloud.Sale;
 import com.viktor.tdd.fluffycloud.Price;
 
 public class OrderingTest
 {
-  OrderProcessor orderProcessor;
+  Sale orderProcessor;
   String currency;
   
   
@@ -22,7 +22,7 @@ public class OrderingTest
   public void prepareOrders()
   {
     currency = "EUR";
-    orderProcessor = new OrderProcessor(new DummyPriceProvider(currency));
+    orderProcessor = new Sale(new DummyPriceProvider(currency));
   }
 
   @Test
