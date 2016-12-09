@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.viktor.tdd.fluffycloud.ConsoleDisplay;
+import com.viktor.tdd.fluffycloud.DummyCatalog;
 import com.viktor.tdd.fluffycloud.Price;
-import com.viktor.tdd.fluffycloud.test.DummyCatalog;
 
 public class PointOfSaleTerminal
 {

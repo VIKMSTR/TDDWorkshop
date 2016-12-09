@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.viktor.tdd.fluffycloud.Catalog;
+import com.viktor.tdd.fluffycloud.DummyCatalog;
 import com.viktor.tdd.fluffycloud.Price;
 
 /***

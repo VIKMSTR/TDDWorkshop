@@ -8,6 +8,7 @@ import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.viktor.tdd.fluffycloud.DummyCatalog;
 import com.viktor.tdd.fluffycloud.ItemPriceNotFoundException;
 import com.viktor.tdd.fluffycloud.Sale;
 import com.viktor.tdd.fluffycloud.Price;

@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.viktor.tdd.fluffycloud.DummyCatalog;
 import com.viktor.tdd.fluffycloud.ItemPriceNotFoundException;
 import com.viktor.tdd.fluffycloud.NoOrderException;
 import com.viktor.tdd.fluffycloud.Sale;

@@ -1,11 +1,7 @@
-package com.viktor.tdd.fluffycloud.test;
+package com.viktor.tdd.fluffycloud;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import com.viktor.tdd.fluffycloud.Catalog;
-import com.viktor.tdd.fluffycloud.ItemPriceNotFoundException;
-import com.viktor.tdd.fluffycloud.Price;
 
 import lombok.Getter;
 
