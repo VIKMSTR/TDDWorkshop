@@ -24,8 +24,8 @@ public abstract class FindPriceInCatalogContract
   
   @Test
   public void productFound() throws Exception {
-      final Catalog catalog = catalogWith("12345", new Price(currency, 300));
-      assertThat(new Price(currency, 300), is(catalog.providePriceForBarcode("12345")));
+      final Catalog catalog = catalogWith("12345", new Price(currency, 795));
+      assertThat(new Price(currency, 795), is(catalog.providePriceForBarcode("12345")));
   }
 
   protected abstract Catalog catalogWith(String barcode, Price matchingPrice);
@@ -34,7 +34,7 @@ public abstract class FindPriceInCatalogContract
   public void productNotFound() throws Exception {
       final Catalog catalog = catalogWithout("::barcode not found::");
       try{
-        Price p = catalog.providePriceForBarcode("12345");
+        Price p = catalog.providePriceForBarcode("56789");
         fail();
       }catch (ItemPriceNotFoundException expected) {
       
