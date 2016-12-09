@@ -4,8 +4,9 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.google.common.collect.ImmutableMap;
 import com.viktor.tdd.fluffycloud.ConsoleDisplay;
-import com.viktor.tdd.fluffycloud.DummyCatalog;
+import com.viktor.tdd.fluffycloud.MapCatalog;
 import com.viktor.tdd.fluffycloud.Price;
 
 public class PointOfSaleTerminal
@@ -24,7 +25,11 @@ public class PointOfSaleTerminal
     fillPrices();
     new ConsumeTextCommands(
                            new SellOneItemController(
-                                                     new DummyCatalog("EUR", prices ),
+                                                     new MapCatalog(
+                                                       ImmutableMap.of(
+                                                       "12345", new Price("EUR",795),
+                                                       "7070529026686", new Price("EUR",1.25)
+                                                         ) ),
                                                      new ConsoleDisplay()
                                                     )::onBarcode //you see dat amazing method reference, don't you ?
                             ).consume(

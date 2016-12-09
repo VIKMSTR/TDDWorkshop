@@ -19,11 +19,7 @@ public class DummyCatalog implements Catalog
     makeDummyPrices();
   }
   
-  public DummyCatalog(String currency, Map<String, Price> priceDatabase){
-    this.currency = currency;
-    this.priceDatabase = priceDatabase;
-  }
-  
+    
 
   private void makeDummyPrices()
   {
