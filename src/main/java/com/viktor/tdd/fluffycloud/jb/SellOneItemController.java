@@ -1,6 +1,12 @@
-package com.viktor.tdd.fluffycloud;
+package com.viktor.tdd.fluffycloud.jb;
 
-public class SellOneItemController implements Controller
+import com.viktor.tdd.fluffycloud.Catalog;
+import com.viktor.tdd.fluffycloud.Controller;
+import com.viktor.tdd.fluffycloud.Display;
+import com.viktor.tdd.fluffycloud.ItemPriceNotFoundException;
+import com.viktor.tdd.fluffycloud.Price;
+
+public class SellOneItemController implements Controller, BarcodeScannedListener
 {
 
   private Catalog catalog;
